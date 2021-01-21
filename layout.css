@@ -1,0 +1,232 @@
+/* mobile first */
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: #84C15B;
+    font-family: Arial, Helvetica, sans-serif;
+    border: solid white 5px;
+}
+
+.header{
+    display: block;
+}
+
+figure img{
+    max-width: 100%;
+}
+
+.company-name{
+    display: none;
+}
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-basis: 100%;
+    padding: 0px;
+    background-color: #84C15B;
+}
+
+.nav > *{
+    flex-grow: 1;
+    flex-basis: auto;
+    border: solid black 1px;
+    background-color: #c4e1b0;
+    text-align: center;
+    color: #F6F6F6;
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+#vision{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: #84C15B;
+    justify-content: center;
+    align-items: center;
+}
+
+#vision section{
+    flex-grow: 2;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    text-align: left;
+    padding: 20px;
+}
+
+.tabletkuva{
+    display: none;
+}
+
+#boxes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#boxes > *{
+    flex-grow: 1;
+    flex-basis: 100%;
+    margin: 5px 0;
+    padding: 5px;
+    background-color: white;
+}
+
+#boxes section{
+    /* border: solid white 5px;
+    border-width: 10px 0px 10px 0px; */
+    margin-bottom: 5px;
+}
+
+#boxes h2{
+    background-color: lightgray;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+#boxes i{
+    float: right;
+}
+
+table th{
+    font-size: 1.4rem;
+    font-weight: 900;
+    width: 20%;
+    padding: 0 10px 1px 0;
+}
+
+footer{
+    background-color: #84C15B;
+    font-size: 1.4rem;
+}
+
+footer p{
+    color: #F6F6F6;
+}
+
+.phone-number{
+    color: black;
+}
+
+.some{
+    color: #F6F6F6;
+    float: right;
+    display: flex;
+}
+
+/* tablet-näkymä */
+@media screen and (min-width:426px) and (max-width:768px){
+    body{
+        border: solid #84C15B 5px;
+    }
+    
+    .nav{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        flex-basis: 100%;
+        padding: 0px;
+        background-color: #84C15B;
+    }
+    .nav > *{
+        flex-grow: 1;
+        flex-basis: 0;
+        border: solid black 1px;
+        background-color: #c4e1b0;
+        text-align: center;
+        padding: 10px;
+        border-radius: 10px 10px 10px 10px;
+    }
+    #vision{
+        background-color: #E4DDC3;
+        border: solid white 5px;
+    }
+    .tabletkuva{
+        display: block;
+    }
+    #boxes{
+        background-color: #84C15B;
+        margin: 5px 0 5px 0;
+    }
+
+    #boxes > *{
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+
+    #boxes #specials, #events{
+        width: 100%;
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+
+    #boxes #news{
+        width: 100%;
+        flex-basis: 100%;
+        flex-grow: 1;
+    }
+
+    footer{
+        padding: 5px;
+    }
+}
+
+/* desktop-näkymä */
+@media screen and (min-width:769px){
+   body{
+       border: solid #84C15B 10px;
+   }
+
+   .nav{
+       display: flex;
+       flex-direction: row;
+       margin-bottom: 5px;
+   }
+
+   .nav > *{
+       flex-basis: 0;
+   }
+
+    #vision{
+        background-color: #E4DDC3;
+        border: solid white 5px;
+    }
+    .tabletkuva{
+        display: block;
+    }
+    .specials{
+        order: 1;
+        flex-basis: 0px;
+    }
+    .events{
+        order: 2;
+        flex-basis: 0px;
+    }
+    .news{
+        order: 3;
+        flex-basis: 0px;
+    }
+    #boxes{
+        background-color: white;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        margin: 5px 0 5px 0;
+    }
+
+    #boxes > *{
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+
+    footer{
+        order: 4;
+    }
+}
